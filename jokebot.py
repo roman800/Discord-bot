@@ -4,6 +4,11 @@ import time
 
 jokeurl = "https://official-joke-api.appspot.com/random_joke"
 
+def read_token():
+    with open("token.txt","r") as f:
+        lines = f.readlines()
+        return lines[0].strip()
+
 bot = discord.Client()
 
 print("Starting bot")
@@ -20,4 +25,4 @@ async def on_message(message):
 
 
 
-bot.run("Nzc4Mjk1MzU4MzkxMzIwNjA2.X7P6CQ.TlC7Q2-BEAEZ6sCnfE28cF_yqKc")
+bot.run(read_token())
