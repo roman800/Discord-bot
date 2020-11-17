@@ -1,6 +1,6 @@
 import discord
 import requests
-import time 
+import time
 
 jokeurl = "https://official-joke-api.appspot.com/random_joke"
 
